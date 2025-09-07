@@ -34,6 +34,11 @@ def get_embeddings_from_image(img_path):
 # STEP 3: Routes
 # ================================
 import re
+@app.route('/', methods=['GET'])
+def hello():
+    return jsonify({
+        "message": "Hello, brother! Your API is working."
+    })
 @app.route("/hello", methods=["GET"])
 def hello():
     return jsonify({"message": "Hello"}), 200
