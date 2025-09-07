@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # PostgreSQL connection
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:Arqum%40123@localhost:5432/face_recognition"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL1')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
