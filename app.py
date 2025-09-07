@@ -39,9 +39,6 @@ def hello():
     return jsonify({
         "message": "Hello, brother! Your API is working."
     })
-@app.route("/hello", methods=["GET"])
-def hello():
-    return jsonify({"message": "Hello"}), 200
 
 @app.route("/upload-references", methods=["POST"])
 def upload_references():
